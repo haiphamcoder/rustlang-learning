@@ -1,17 +1,19 @@
 fn main() {
+    // Biến không thể thay đổi (immutable)
     let x = 5;
-    println!("The value of x is: {}", x);
+    println!("Giá trị của x là: {}", x);
 
     /*
-    x = 6; // this is an error because x is immutable
-    println!("The value of x is: {}", x);
+    x = 6; // Lỗi vì x là immutable
+    println!("Giá trị của x là: {}", x);
      */
 
-    let mut y = 5; // mutable variable
-    y = 6;
-    println!("The value of y is: {}", y);
+    // Biến có thể thay đổi (mutable) 
+    let mut y = 5;
+    y = 6; 
+    println!("Giá trị của y là: {}", y);
 
-    // constants are immutable by default
-    const TWO_HOURS_IN_SECONDS: u32 = 60 * 60 * 2;
-    println!("The value of TWO_HOURS_IN_SECONDS is: {}s", TWO_HOURS_IN_SECONDS);
+    // Hằng số - luôn immutable và phải khai báo kiểu
+    const SECONDS_IN_TWO_HOURS: u32 = 2 * 60 * 60;
+    println!("Số giây trong 2 giờ là: {}s", SECONDS_IN_TWO_HOURS);
 }
