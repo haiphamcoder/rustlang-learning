@@ -20,4 +20,39 @@ fn main() {
         20
     };
     println!("number is {}", number);
+
+    // loop
+    let mut counter = 0;
+    loop {
+        counter += 1;
+        if counter == 10 {
+            break;
+        }
+    }
+
+    // while loop
+    let mut number = 3;
+    while number != 0 {
+        println!("{}!", number);
+        number -= 1;
+    }
+    println!("LIFTOFF!!!");
+
+    // for loop
+    for number in 1..4 {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!");
+
+    // for loop with range
+    for number in 0..=5 {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!"); // 0 1 2 3 4 5
+
+    // for loop with range and step
+    for number in (0..=5).step_by(2) {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!"); // 0 2 4
 }
