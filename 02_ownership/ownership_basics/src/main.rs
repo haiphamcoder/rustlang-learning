@@ -11,9 +11,21 @@ fn main() {
     print!("s3: {}\n", s3);
     print!("s4: {}\n", s4);
 
+    // Function return value
+    let s5 = String::from("Hello, Rust!");
+    let (s6, len) = calculate_length(s5);
+    println!("The length of '{}' is {}.", s6, len);
+    print!("s6: {}\n", s6);
+    // print!("s5: {}\n", s5); // Error: value used here after move
+
     // Copy trait, only for primitive types
     let x = 5;
     let y = x;
     print!("x: {}\n", x);
     print!("y: {}\n", y);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len();
+    (s, length)
 }
